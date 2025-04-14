@@ -11,5 +11,4 @@ export default function SvgComponent(props: SvgComponentProps): JSX.Element {
         </g>
     </svg>
     );
-}  </svg>
-);
+}
