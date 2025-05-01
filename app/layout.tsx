@@ -16,11 +16,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-gradient-to-t from-[#00001E] to-[#023A46]`}>
-      <Navbar/> 
-        <div className="container p-7 h-full ">
+      <body className={`${inter.className} bg-[#02091e]`}>
+      {/*  bg-transparent */}
+      
         {children}
-        </div>
+     
         </body>
     </html>
   )

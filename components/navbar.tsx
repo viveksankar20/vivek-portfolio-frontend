@@ -44,7 +44,7 @@ const Navbar: React.FC = () => {
         {/* Buttons & Mobile Menu */}
         <div>
           {/* GitHub button visible only on large screens */}
-          <a href="https://github.com/viveksankar20" target="new" className="border lg:block hidden border-[#00E0FF] text-[#00E0FF] px-5 p-1 rounded-3xl font-medium text-lg" type="button">
+          <a href="https://github.com/viveksankar20" target="new" className="border lg:block hidden border-[#00D1EF] text-[#00D1EF] hover:border-[#0400E0] hover:bg-[#0400E0] duration-700 hover:text-white px-5 p-1 rounded-3xl font-medium text-lg" type="button">
             GitHub
           </a>
 
