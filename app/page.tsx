@@ -1,9 +1,8 @@
 "use client"
-import Education from "@/components/education"
 import Experience from "@/components/experience"
 import MainSection from "@/components/mainSection"
 import Skils from "@/components/skils"
-import React, { use } from "react"
+import React from "react"
 import 'animate.css';
 import {useEffect,useRef} from "react";
 import Navbar from "@/components/navbar"
@@ -29,7 +28,7 @@ if(videoRef.current){
 
       <div className="relative  h-full w-full">
        
-        <video src="/3141208-uhd_3840_2160_25fps.mp4" ref={videoRef} autoPlay muted loop className=" absolute opacity-35"></video>
+        <video src="/3141208-uhd_3840_2160_25fps.mp4" ref={videoRef} autoPlay muted loop className="lg:h-auto h-screen object-fill fixed  opacity-10"></video>
       </div>
       
       {/* Content */}
@@ -40,7 +39,7 @@ if(videoRef.current){
         <div className="container p-4 md:p-7">
           <Skils/>
           <Experience/>
-          <Education/>
+          {/* <Education/> */}
         </div>
       </div>
     </main>

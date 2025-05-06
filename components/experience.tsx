@@ -1,6 +1,5 @@
-import { motion } from 'framer-motion';
 import React from 'react';
-
+import { BriefcaseBusiness } from 'lucide-react';
 function Experience() {
   return (
     <div className=" mx-auto w-full  max-w-4xl px-4 sm:px-6 lg:px-8 py-10">
@@ -18,9 +17,15 @@ function Experience() {
       </div>
 
       {/* Timeline Items */}
-      <div className="space-y-5 sm:space-y-10">
+      <div className="">
         {timelineData.map((item, index) => (
-          <div key={index} className="">
+          <div key={index} className={`relative pb-5 pl-9 ${
+            index !== timelineData.length - 1 ? 'before:absolute before:left-0 before:top-6 before:bottom-0 before:w-1 before:bg-gradient-to-b before:from-emerald-300  before:to-sky-400' : ''
+          }`}>
+            {/* <div className='p-[2px] border'></div>*/}
+            <span className=' bg-[#14151D] absolute -left-5 p-2 border-2 border-gray-500 rounded-full'>
+<BriefcaseBusiness className='text-white   text-xl '/>
+</span>
             <TimelineItem {...item} />
           </div>
         ))}
@@ -87,7 +92,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
 }) => {
   return (
     // <motion.div whileHover={{scale: 1.05}} whileTap={{scale: 0.95}} transition={{duration: 0.2}}>
-    <div className="border  border-[#00CAEE] hover:scale-105 duration-700 bg-[#14151D] hover:shadow-costom-shadow  p-5 sm:p-6 rounded-xl  overflow-hidden">
+    <div className="border  border-[#00CAEE]  bg-[#14151D] hover:shadow-costom-shadow  p-5 sm:p-6 rounded-xl  overflow-hidden">
       <h1 className='text-[#34d399] my-2 font-semibold'>{year}</h1>
     <h3 className="text-[#34d399] font-bold text-lg sm:text-xl mb-2">{title}</h3>
     <h4 className="text-white text-base sm:text-lg font-semibold">{institution}</h4>
