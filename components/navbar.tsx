@@ -2,6 +2,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
+
+import MernLogo from "./navbar-logo";
 motion
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -27,10 +29,10 @@ const Navbar: React.FC = () => {
   }, [isOpen]);
 
   return (
-    <div className="w-full lg:py-3 py-6 bg-gradient-to-t from-[#00001E] to-[#023A46]">
+    <div className="w-full lg:py-3 py-4 bg-gradient-to-t from-[#00001E] to-[#023A46]">
       <div className="relative container flex justify-between items-center text-white">
         {/* nav logo */}
-        <div>logo</div>
+        <div><MernLogo/></div>
 
         {/* Navbar options for large screens */}
         <div className="lg:flex hidden gap-x-10 font-medium">
@@ -44,7 +46,7 @@ const Navbar: React.FC = () => {
         {/* Buttons & Mobile Menu */}
         <div>
           {/* GitHub button visible only on large screens */}
-          <a href="https://github.com/viveksankar20" target="new" className="border lg:block hidden border-[#00D1EF] text-[#00D1EF] hover:border-[#0400E0] hover:bg-[#0400E0] duration-700 hover:text-white px-5 p-1 rounded-3xl font-medium text-lg" type="button">
+          <a href="https://github.com/viveksankar20" target="new" className="border lg:block hidden border-[#00D1EF] text-[#00D1EF] hover:text-slate-900 hover:bg-gradient-to-r hover:from-emerald-300 hover:to-sky-400 transition-all duration-700 px-5 p-1 rounded-3xl font-medium text-lg" type="button">
             GitHub
           </a>
 

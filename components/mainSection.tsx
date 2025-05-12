@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import React from 'react'
 import Typewriter from 'typewriter-effect'
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 function MainSection() {
  
@@ -37,10 +36,10 @@ function MainSection() {
     
     <p className='text-[#FFFFFF]'>A skilled MERN stack developer with a strong portfolio, passionate about staying updated on modern web technologies. Proficient in building full-stack applications with MongoDB, Express.js, React, and Node.js. Collaborative and committed to delivering high-quality solutions, you thrive in dynamic teams. Eager to contribute creativity and bring innovative, scalable ideas to life across the entire development stack.</p>
 
-    <div className='flex gap-x-5'>
+    <div className='flex gap-x-5 items-center'>
         <a href='/skills/Java_Developer_Vivek.pdf' target='new'className=" text-[#FFFFFF] bg-gradient-to-r from-[#00D1EF] to-[#0400E0] hover:bg-gradient-to-l hover:from-[#00D1EF] hover:to-[#0400E0] transition-all duration-700 text-lg p-2 rounded-lg whitespace-nowrap"
  >Check Resume</a>
-        <button type='button' className='border border-[#00E0FF] px-8 text-lg rounded text-[#00E0FF] font-medium'>Hire Me</button>
+        <a href='https://www.linkedin.com/in/viveksankar2k1/'  className='border  border-[#00E0FF] px-8 text-lg  p-2 rounded text-[#00E0FF] font-medium hover:text-slate-900 hover:bg-gradient-to-r hover:from-emerald-300 hover:to-sky-400 transition-all duration-700'>Hire Me</a>
     </div>
 </div>
    </div>

@@ -2,8 +2,7 @@ import React from 'react';
 import { BriefcaseBusiness } from 'lucide-react';
 function Experience() {
   return (
-    <div className=" mx-auto w-full  max-w-4xl px-4 sm:px-6 lg:px-8 py-10">
-      
+    <div className=" mx-auto w-full  max-w-4xl px-4 sm:px-6 lg:px-8">
       
       <div className="space-y-4 mb-8">
       <h1 className='uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-center bg-clip-text text-transparent '> My Journey & Growth</h1>
@@ -93,8 +92,8 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
   return (
     // <motion.div whileHover={{scale: 1.05}} whileTap={{scale: 0.95}} transition={{duration: 0.2}}>
     <div className="border  border-[#00CAEE]  bg-[#14151D] hover:shadow-costom-shadow  p-5 sm:p-6 rounded-xl  overflow-hidden">
-      <h1 className='text-[#34d399] my-2 font-semibold'>{year}</h1>
-    <h3 className="text-[#34d399] font-bold text-lg sm:text-xl mb-2">{title}</h3>
+      <h1 className='text-gray-300 my-2 font-semibold'>{year}</h1>
+    <h3 className="text-[#00CAEE] font-bold text-lg sm:text-xl mb-2">{title}</h3>
     <h4 className="text-white text-base sm:text-lg font-semibold">{institution}</h4>
    
    
