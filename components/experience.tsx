@@ -2,7 +2,10 @@ import React from 'react';
 import { BriefcaseBusiness } from 'lucide-react';
 function Experience() {
   return (
-    <div className=" mx-auto w-full  max-w-4xl px-4 sm:px-6 lg:px-8">
+    <div id='Experience' data-aos="flip-left"
+    data-aos-duration="500"
+    data-aos-delay="500"
+    data-aos-easing="ease-in-cubic" className=" mx-auto w-full  max-w-4xl px-4 sm:px-6 lg:px-8">
       
       <div className="space-y-4 mb-8">
       <h1 className='uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-center bg-clip-text text-transparent '> My Journey & Growth</h1>
@@ -18,7 +21,10 @@ function Experience() {
       {/* Timeline Items */}
       <div className="">
         {timelineData.map((item, index) => (
-          <div key={index} className={`relative pb-5 pl-9 ${
+          <div data-aos="flip-left"
+          data-aos-duration="500"
+          data-aos-delay="500"
+          data-aos-easing="ease-in-cubic" key={index} className={`relative pb-5 pl-9 ${
             index !== timelineData.length - 1 ? 'before:absolute before:left-0 before:top-6 before:bottom-0 before:w-1 before:bg-gradient-to-b before:from-emerald-300  before:to-sky-400' : ''
           }`}>
             {/* <div className='p-[2px] border'></div>*/}

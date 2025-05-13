@@ -3,7 +3,10 @@ import Experience from "@/components/experience"
 import MainSection from "@/components/mainSection"
 import Skils from "@/components/skils"
 import React from "react"
-import 'animate.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
+
 import {useEffect,useRef} from "react";
 import Navbar from "@/components/navbar"
 import Project from "@/components/project"
@@ -12,6 +15,12 @@ import Footer from "@/components/footer"
 
 export default function Home() {
  
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,     // global duration
+      once: false,        // <--- this allows re-triggering on scroll
+    })
+  }, [])
   const videoRef = useRef<HTMLVideoElement>(null);
 useEffect(()=>{
 if(videoRef.current){
@@ -19,8 +28,9 @@ if(videoRef.current){
 }
 },[])
 
+
   return (
-    <main className="relative min-h-screen">
+    <main id="About" className="relative min-h-screen">
       {/* Navbar */}
       <div className="fixed z-20 w-full">
         <Navbar/> 

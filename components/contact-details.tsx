@@ -2,7 +2,10 @@ import React from 'react'
 
 function ContactDetails() {
   return (
-    <div className=' mx-auto w-full  max-w-4xl px-4 sm:px-6 lg:px-8'>
+    <div data-aos="zoom-in-down"
+    data-aos-duration="500"
+    data-aos-delay="500"
+    data-aos-easing="ease-in-cubic" className=' mx-auto w-full  max-w-4xl px-4 sm:px-6 lg:px-8'>
 
 <div className="space-y-4 mb-8">
 

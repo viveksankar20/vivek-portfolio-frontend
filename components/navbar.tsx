@@ -36,11 +36,11 @@ const Navbar: React.FC = () => {
 
         {/* Navbar options for large screens */}
         <div className="lg:flex hidden gap-x-10 font-medium">
-          <a href="#">About</a>
-          <a href="#">Skills</a>
-          <a href="#">Experience</a>
-          <a href="#">Projects</a>
-          <a href="#">Education</a>
+          <a href="#About">About</a>
+          <a href="#Skills">Skills</a>
+          <a href="#Experience">Experience</a>
+          <a href="#Projects">Projects</a>
+         
         </div>
 
         {/* Buttons & Mobile Menu */}
@@ -65,11 +65,11 @@ const Navbar: React.FC = () => {
           transition={{duration:0.5}}
             className="lg:hidden transition duration-500 gap-x-10 font-medium flex flex-col absolute right-5 bg-[#00001E] text-white p-5 rounded-md text-xl gap-y-5 top-12"
           >
-            <a href="#" onClick={() => setIsOpen(false)}>About</a>
-            <a href="#" onClick={() => setIsOpen(false)}>Skills</a>
-            <a href="#" onClick={() => setIsOpen(false)}>Experience</a>
-            <a href="#" onClick={() => setIsOpen(false)}>Projects</a>
-            <a href="#" onClick={() => setIsOpen(false)}>Education</a>
+            <a href="#About" onClick={() => setIsOpen(false)}>About</a>
+            <a href="#Skills" onClick={() => setIsOpen(false)}>Skills</a>
+            <a href="#Experience" onClick={() => setIsOpen(false)}>Experience</a>
+            <a href="#Projects" onClick={() => setIsOpen(false)}>Projects</a>
+           
 
             {/* GitHub button in mobile view */}
             <button className="border border-[#00E0FF] text-[#00E0FF] px-5 p-1 rounded-3xl font-medium text-lg" type="button">

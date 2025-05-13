@@ -12,7 +12,10 @@ interface ProductCardProps{
 
 function Project() {
   return (
-    <div >
+    <div id='Projects' data-aos="fade-left"
+    data-aos-duration="500"
+    data-aos-delay="500"
+    data-aos-easing="ease-in-sine">
 
 <div className="space-y-4 mb-8">
   <h1 className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-center bg-clip-text text-transparent">
@@ -81,7 +84,7 @@ const ProjectCard: React.FC<ProductCardProps> = ({
       viewport={{ once: true }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
-      <div className="relative w-full h-48 overflow-hidden rounded-lg">
+      <div   className="relative w-full h-48 overflow-hidden rounded-lg">
         <Image
           src={imageSrc}
           alt={title}

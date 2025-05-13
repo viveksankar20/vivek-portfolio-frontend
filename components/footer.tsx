@@ -2,6 +2,7 @@
 import { Github, Instagram, Mail, MessageSquareMore, Phone } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
+import { FaWhatsapp } from "react-icons/fa";
 
 function Footer() {
   return (
@@ -20,7 +21,7 @@ function Footer() {
             <a href="tel:+91 9025138965"  className="hover:text-[#00CAEE] ">
               <Phone />
             </a>
-            <Link href="sms:+1234567890" aria-label="Message" className="hover:text-[#00CAEE] transition cursor-pointer">
+            <Link href="sms:+91 9025138965" aria-label="Message" className="hover:text-[#00CAEE] transition cursor-pointer">
               <MessageSquareMore />
             </Link>
             <Link href="mailto:your@email.com" aria-label="Email" className="hover:text-[#00CAEE] transition cursor-pointer">
@@ -30,12 +31,23 @@ function Footer() {
               <Instagram />
             </Link>
             <a
+  href="https://wa.me/919025138965"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Whatsapp"
+  className="hover:text-[#00CAEE] transition cursor-pointer text-2xl"
+>
+  <FaWhatsapp />
+</a>
+
+            <Link
+            className='hover:text-[#00CAEE] transition cursor-pointer'
   href="https://github.com/viveksankar20"
   target="_blank"
   rel="noopener noreferrer"
 >
   <Github />
-</a>
+</Link>
 {/* service_hrbxoh2 */}
           </div>
         </div>
