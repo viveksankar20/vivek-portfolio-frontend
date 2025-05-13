@@ -1,7 +1,7 @@
 import * as React from "react"
 interface SvgComponentProps extends React.SVGProps<SVGSVGElement> {}
 
-export default function SvgComponent(props: SvgComponentProps): JSX.Element {
+export default function SvgComponent(props: SvgComponentProps): React.JSX.Element {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" {...props}>
         <g data-name="24-Html">
