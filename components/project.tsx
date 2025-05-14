@@ -12,9 +12,9 @@ interface ProductCardProps{
 
 function Project() {
   return (
-    <div id='Projects' data-aos="fade-left"
-    data-aos-duration="500"
-    data-aos-delay="500"
+    <div id='Projects' data-aos="fade-up"
+    data-aos-duration="200"
+    data-aos-delay="200"
     data-aos-easing="ease-in-sine">
 
 <div className="space-y-4 mb-8">
@@ -36,6 +36,10 @@ function Project() {
 <div className="relative w-full space-y-6 max-w-3xl">
 {
   Data.projects.map((project, index) => (
+    <div data-aos="fade-up"
+    data-aos-duration="200"
+    data-aos-delay="200"
+    data-aos-easing="ease-in-sine">
     <ProjectCard
       key={index}
       title={project.title}
@@ -43,6 +47,7 @@ function Project() {
       imageSrc={project.imageSrc}
       skills={project.skills} // Pass the skills prop if needed
     />
+    </div>
   ))}
 
 </div>
@@ -84,6 +89,7 @@ const ProjectCard: React.FC<ProductCardProps> = ({
       viewport={{ once: true }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
+
       <div   className="relative w-full h-48 overflow-hidden rounded-lg">
         <Image
           src={imageSrc}
@@ -100,7 +106,7 @@ const ProjectCard: React.FC<ProductCardProps> = ({
           {skills?.map((val, index) => (
             <span
               key={index}
-              className=" px-2 py-1 font-semibold rounded bg-gray-800 text-sm hover:text-gray-900 text-blue-500 hover:bg-gradient-to-r from-emerald-300 to-sky-400 transition-all duration-300"
+              className=" capitalize px-2 py-1 font-semibold rounded bg-gray-800 text-sm hover:text-gray-900 text-blue-500 hover:bg-gradient-to-r from-emerald-300 to-sky-400 transition-all duration-300"
             >
               {val}
             </span>

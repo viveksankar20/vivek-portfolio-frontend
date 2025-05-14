@@ -1,10 +1,11 @@
 import React from 'react';
 import { BriefcaseBusiness } from 'lucide-react';
+import { Data } from '@/data';
 function Experience() {
   return (
     <div id='Experience' data-aos="flip-left"
-    data-aos-duration="500"
-    data-aos-delay="500"
+    data-aos-duration="200"
+    data-aos-delay="200"
     data-aos-easing="ease-in-cubic" className=" mx-auto w-full  max-w-4xl px-4 sm:px-6 lg:px-8">
       
       <div className="space-y-4 mb-8">
@@ -20,12 +21,12 @@ function Experience() {
 
       {/* Timeline Items */}
       <div className="">
-        {timelineData.map((item, index) => (
+        {Data.timelineData.map((item, index) => (
           <div data-aos="flip-left"
-          data-aos-duration="500"
-          data-aos-delay="500"
+          data-aos-duration="200"
+          data-aos-delay="200"
           data-aos-easing="ease-in-cubic" key={index} className={`relative pb-5 pl-9 ${
-            index !== timelineData.length - 1 ? 'before:absolute before:left-0 before:top-6 before:bottom-0 before:w-1 before:bg-gradient-to-b before:from-emerald-300  before:to-sky-400' : ''
+            index !== Data.timelineData.length - 1 ? 'before:absolute before:left-0 before:top-6 before:bottom-0 before:w-1 before:bg-gradient-to-b before:from-emerald-300  before:to-sky-400' : ''
           }`}>
             {/* <div className='p-[2px] border'></div>*/}
             <span className=' bg-[#14151D] absolute -left-5 p-2 border-2 border-gray-500 rounded-full'>
@@ -39,47 +40,7 @@ function Experience() {
   );
 }
 
-const timelineData = [
-  {
-    year: '2024',
-    title: 'MERN Stack Developer',
-    institution: '7Eagles',
-    description:
-      'Completed an intensive Java Full Stack Development course, mastering front-end and back-end technologies including Java, Spring Boot, React.js, and database management through hands-on real-world projects.',
-  },
-  {
-    year: '2023',
-    title: 'My Course',
-    institution: 'Besant Technologies',
-    description:
-      'Completed an intensive Java Full Stack Development course, mastering front-end and back-end technologies including Java, Spring Boot, React.js, and database management through hands-on real-world projects.',
-  },
-  {
-    year: '2023',
-    title: 'My College',
-    institution: 'OASYS INSTITUTE OF TECHNOLOGY, Pulivalam, Trichy 621006',
-   
-    description:
-      'Graduated with a Bachelor\'s degree in ECE, developing a strong technical foundation in electronics, communication systems, and programming, supported by practical project experience.',
-  },
-  {
-    year: '2019',
-    title: 'My School',
-    institution: 'AGM HR. SEC SCHOOL, ERAGUDI 621001',
-  
-    description:
-      'Specialized in Mathematics and Computer Science during Higher Secondary, enhancing analytical thinking and technical skills.',
-  },
-  {
-    year: '2017',
-    title: 'My School',
-    institution: 'AGM HR. SEC SCHOOL, ERAGUDI 621001',
-    
-   
-    description:
-      'Successfully completed SSLC, building a strong academic base in core subjects and preparing for higher education.',
-  },
-];
+
 
 
 interface TimelineItemProps {

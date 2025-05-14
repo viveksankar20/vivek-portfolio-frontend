@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+import { Data } from "@/data";
 export default function MernLogo() {
   return (
     <div className="flex items-center justify-center">
@@ -22,7 +22,7 @@ export default function MernLogo() {
           whileHover={{ scale: 1.1 }}
           className="text-cyan-400 lg:text-4xl text-2xl font-semibold tracking-wide"
         >
-          MERN
+         {Data.mainSection.headLogo}
         </motion.h1>
 
         {/* Right Chevron */}

@@ -40,7 +40,7 @@ export default function Home() {
           autoPlay
           muted
           loop
-          className="lg:h-auto h-screen object-fill fixed opacity-15"
+          className="lg:h-auto h-screen object-fill fixed  opacity-15"
         ></video>
       </div>
 
