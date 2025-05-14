@@ -20,12 +20,12 @@ function Experience() {
       </div>
 
       {/* Timeline Items */}
-      <div className="">
+      <div  className="">
         {Data.timelineData.map((item, index) => (
-          <div data-aos="flip-left"
+          <div key={index} data-aos="flip-left"
           data-aos-duration="200"
           data-aos-delay="200"
-          data-aos-easing="ease-in-cubic" key={index} className={`relative pb-5 pl-9 ${
+          data-aos-easing="ease-in-cubic"  className={`relative pb-5 pl-9 ${
             index !== Data.timelineData.length - 1 ? 'before:absolute before:left-0 before:top-6 before:bottom-0 before:w-1 before:bg-gradient-to-b before:from-emerald-300  before:to-sky-400' : ''
           }`}>
             {/* <div className='p-[2px] border'></div>*/}

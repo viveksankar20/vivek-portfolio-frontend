@@ -36,10 +36,10 @@ function Project() {
 <div className="relative w-full space-y-6 max-w-3xl">
 {
   Data.projects.map((project, index) => (
-    <div data-aos="fade-up"
+    <div key={index} data-aos="fade-up"
     data-aos-duration="200"
     data-aos-delay="200"
-    data-aos-easing="ease-in-sine">
+    data-aos-easing="ease-in-sine" className='sticky top-32'>
     <ProjectCard
       key={index}
       title={project.title}
@@ -82,7 +82,7 @@ const ProjectCard: React.FC<ProductCardProps> = ({
 }) => {
   return (
     <motion.div
-      className="border rounded-xl border-[#00CAEE] bg-[#14151D] sticky top-32 flex flex-col justify-center p-2 hover:shadow-costom-shadow transition-shadow duration-300"
+      className="border rounded-xl border-[#00CAEE] bg-[#14151D]  flex flex-col justify-center p-2 hover:shadow-costom-shadow transition-shadow duration-300"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       whileHover={{ scale: 1.03 }}
