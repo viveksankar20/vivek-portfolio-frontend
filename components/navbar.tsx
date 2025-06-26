@@ -72,9 +72,9 @@ const Navbar: React.FC = () => {
            
 
             {/* GitHub button in mobile view */}
-            <button className="border border-[#00E0FF] text-[#00E0FF] px-5 p-1 rounded-3xl font-medium text-lg" type="button">
+            <a href="https://github.com/viveksankar20" className="border border-[#00E0FF] text-[#00E0FF] px-5 p-1 rounded-3xl font-medium text-lg" type="button">
               GitHub
-            </button>
+            </a>
           </motion.div>
         )}
       </div>
