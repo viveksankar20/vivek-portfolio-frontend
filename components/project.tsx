@@ -8,6 +8,7 @@ interface ProductCardProps{
   description: string;
   imageSrc: string;
   skills?: string[];
+  Link?:string;
 }
 
 function Project() {
@@ -39,13 +40,14 @@ function Project() {
     <div key={index} data-aos="fade-up"
     data-aos-duration="200"
     data-aos-delay="200"
-    data-aos-easing="ease-in-sine" className='sticky top-32'>
+    data-aos-easing="ease-in-sine" className=''>
     <ProjectCard
       key={index}
       title={project.title}
       description={project.description}
       imageSrc={project.imageSrc}
       skills={project.skills} // Pass the skills prop if needed
+      Link={project.Link}
     />
     </div>
   ))}
@@ -79,10 +81,11 @@ const ProjectCard: React.FC<ProductCardProps> = ({
   description,
   imageSrc,
   skills,
+  Link
 }) => {
   return (
     <motion.div
-      className="border rounded-xl border-[#00CAEE] bg-[#14151D]  flex flex-col justify-center p-2 hover:shadow-costom-shadow transition-shadow duration-300"
+      className="border rounded-xl group border-[#00CAEE] bg-[#14151D]  flex flex-col justify-center p-2 hover:shadow-costom-shadow transition-shadow duration-300"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       whileHover={{ scale: 1.03 }}
@@ -90,7 +93,7 @@ const ProjectCard: React.FC<ProductCardProps> = ({
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
 
-      <div   className="relative w-full h-48 overflow-hidden rounded-lg">
+      <div className="relative w-full h-48 overflow-hidden rounded-lg">
         <Image
           src={imageSrc}
           alt={title}
@@ -100,7 +103,7 @@ const ProjectCard: React.FC<ProductCardProps> = ({
         />
       </div>
 
-      <div className="my-3 group space-y-3 px-2">
+      <div className="my-3  space-y-3 px-2">
         {/* Skill Tags */}
         <div className="flex flex-wrap gap-2">
           {skills?.map((val, index) => (
@@ -114,9 +117,9 @@ const ProjectCard: React.FC<ProductCardProps> = ({
         </div>
 
         {/* Title */}
-        <h2 className="font-bold text-xl text-[#00CAEE]">
+        <a href={Link} target='new' className=" underline font-bold text-xl text-[#00CAEE]">
           {title}
-        </h2>
+        </a>
 
         {/* Description - expandable on hover */}
         <p className="text-sm text-gray-300 overflow-hidden whitespace-nowrap text-ellipsis group-hover:whitespace-normal group-hover:overflow-visible group-hover:text-clip transition-all duration-300">
